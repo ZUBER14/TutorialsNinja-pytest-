@@ -1,0 +1,8 @@
+homepage = HomePageObjects(self.driver)
+registerPage = RegisterPageObjects(self.driver)
+loginPage = LoginPageObjects(self.driver)
+passwordPage = PasswordPageObjects(self.driver)
+logoutPage = LogoutPageObjects(self.driver)
+accountPage = AccountPageObjects(self.driver)
+forgetPassword = ForgetPasswordPageObjects(self.driver)
+accountConfirmPage = AccountConfirmPageObjects(self.driver)
