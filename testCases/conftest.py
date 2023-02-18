@@ -1,8 +1,12 @@
+import os
+
 import pytest
 from selenium import webdriver
 
-driver = None
+from Utilities.BaseClass import BaseClass
 
+driver = None
+baseClass = BaseClass()
 
 def pytest_addoption(parser):
     parser.addoption(
@@ -20,7 +24,7 @@ def setup(request):
         driver = webdriver.Firefox
     elif browserName == "edge":
         driver = webdriver.Edge
-    driver.implicitly_wait(time_to_wait=10)
+    baseClass.set_implicit_wait(driver, 10)
     driver.maximize_window()
     driver.get("http://www.tutorialsninja.com/demo/")
     request.cls.driver = driver
@@ -52,4 +56,9 @@ def pytest_runtest_makereport(item):
 
 
 def _capture_screenshot(name):
-    driver.get_screenshot_as_file(name)
+    directory = "../screenShots"
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+    file_path = os.path.join(directory, name)
+    driver.get_screenshot_as_file(file_path)
+    # driver.get_screenshot_as_file(name)

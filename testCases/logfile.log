@@ -1,0 +1,8 @@
+2023-02-19 01:24:40,227 : INFO : test_verify_Registering_Mandatory_Field :Script started to execute
+2023-02-19 01:24:41,070 : INFO : test_verify_Registering_Mandatory_Field :Giving all the necessary details into field
+2023-02-19 01:24:42,711 : INFO : test_verify_Registering_Mandatory_Field :Account is created and Expected result and actual result is same
+2023-02-19 01:24:50,978 : INFO : test_verify_Registering_BY_Providing_All_Fileds :Script started to execute
+2023-02-19 01:24:51,967 : INFO : test_verify_Registering_BY_Providing_All_Fileds :Giving all the necessary details into field
+2023-02-19 01:24:53,955 : INFO : test_verify_Registering_BY_Providing_All_Fileds :Account is created and Expected result and actual result is same
+2023-02-19 01:25:00,091 : INFO : test_verify_Notification_BY_NotProviding_All_Fileds_BySubmiting :Script started to execute
+2023-02-19 01:25:01,702 : WARNING : test_verify_Notification_BY_NotProviding_All_Fileds_BySubmiting :Warning messages on page

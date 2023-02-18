@@ -76,7 +76,7 @@ class RegisterPageObjects:
         return self.driver.find_element(*self.telephone_warn).text
 
     def password_actual_WarningMessage(self):
-        return self.driver.find_element(*self.password_warn).Text()
+        return self.driver.find_element(*self.password_warn).text
 
     def confirmPass_actual_WarningMessage(self):
         return self.driver.find_element(*self.confPassword_warn).text
@@ -98,22 +98,22 @@ class RegisterPageObjects:
     def lastName_exepected_WarningMessage(self):
         return "Last Name must be between 1 and 32 characters!"
 
-    def Email_exepected_WarningMessage(self):
+    def email_exepected_WarningMessage(self):
         return "E-Mail Address does not appear to be valid!"
 
-    def Telephone_exepected_WarningMessage(self):
+    def telephone_exepected_WarningMessage(self):
         return "Telephone must be between 3 and 32 characters!"
 
-    def Password_exepected_WarningMessage(self):
+    def password_exepected_WarningMessage(self):
         return "Password must be between 4 and 20 characters!"
 
-    def ConfirmPass_expected_WarningMessage(self):
+    def confirmPass_expected_WarningMessage(self):
         return "Password confirmation does not match password!"
 
-    def PrivacyPolicy_exepected_WarningMessage(self):
+    def privacyPolicy_exepected_WarningMessage(self):
         return "Warning: You must agree to the Privacy Policy!"
 
-    def LoginPage_expected_WarningMessage(self):
+    def loginPage_expected_WarningMessage(self):
         return "If you already have an account with us, please login at the login page."
 
     def alreadyRegistered_expected_WarningMessage(self):
