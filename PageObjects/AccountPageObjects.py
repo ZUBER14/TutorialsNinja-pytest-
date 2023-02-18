@@ -4,8 +4,6 @@ from PageObjects import PasswordPageObjects, LogoutPageObjects
 from Utilities.BaseClass import BaseClass
 
 
-
-
 class AccountPageObjects:
 
     def __init__(self, driver):
@@ -32,11 +30,11 @@ class AccountPageObjects:
     logout_Dropdown_loc = (By.LINK_TEXT, "Logout")
 
     def MyAccountDropdown_LoginPage(self):
-        self.baseClass.explicit_wait(*self.accountDropdown_loc)
+        self.baseClass.wait_for_element(self.driver, self.accountDropdown_loc)
         return self.driver.find_element(*self.accountDropdown_loc)
 
     def Logout_LoginPage(self):
-        self.baseClass.explicit_wait(*self.accountDropdown_loc)
+        self.baseClass.wait_for_element(self.driver, self.accountDropdown_loc)
         self.driver.find_element(*self.logout_Dropdown_loc).click()
         logoutPage = LogoutPageObjects.LogoutPageObjects(self.driver)
         return logoutPage

@@ -16,7 +16,7 @@ class HomePageObjects:
     login = (By.LINK_TEXT, "Login")
 
     def AccountDropdown(self):
-        self.baseClass.verifyLinkPresence(*self.account)
+        self.baseClass.wait_for_element(self.driver, self.account)
         return self.driver.find_element(*self.account)
 
     def selectRegister(self):
@@ -26,16 +26,16 @@ class HomePageObjects:
         return self.driver.find_element(*self.login)
 
     def Account_register(self):
-        self.baseClass.explicitlyWait(self.account)
-        self.driver.find_element(*self.account).click()
+        self.baseClass.wait_for_element(self.driver, self.account).click()
+        # self.driver.find_element(*self.account).click()
         self.driver.find_element(*self.register).click()
         registerPage = RegisterPageObjects.RegisterPageObjects(self.driver)
         return registerPage
 
     def Account_login(self):
-        self.baseClass.explicit_wait(*self.account)
-        self.driver.find_element(*self.account)
-        self.driver.find_element(*self.login)
+        self.baseClass.wait_for_element(self.driver, self.account)
+        self.driver.find_element(*self.account).click()
+        self.driver.find_element(*self.login).click()
         loginPage = LoginPageObjects.LoginPageObjects(self.driver)
         return loginPage
 

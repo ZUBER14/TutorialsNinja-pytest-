@@ -17,12 +17,12 @@ class AccountConfirmPageObjects:
 
     def continue_button(self):
         self.driver.find_element(*self.continue_button_loc)
-        loginPage = LoginPageObjects.LoginPageObjects(self.driver)   #changed
+        loginPage = LoginPageObjects.LoginPageObjects(self.driver)
         return loginPage
 
     def editAccount(self):
         self.driver.find_element(*self.edit_account_loc)
-        registerPage = RegisterPageObjects.RegisterPageObjects(self.driver)         #changed
+        registerPage = RegisterPageObjects.RegisterPageObjects(self.driver)
         return registerPage
 
     def conf_message(self):

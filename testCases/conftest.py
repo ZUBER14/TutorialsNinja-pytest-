@@ -10,7 +10,7 @@ def pytest_addoption(parser):
     )
 
 
-@pytest.fixture(scope="class")
+@pytest.fixture(scope="function")
 def setup(request):
     global driver
     browserName = request.config.getoption("--browserName")

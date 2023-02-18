@@ -57,7 +57,7 @@ class LoginPageObjects:
     AccountDropDown_Forget = (By.XPATH, "(//a[contains(text(),'Logout')])[1]")
 
     def LoginPageDropDown(self):
-        self.baseClass.explicit_wait(*self.AccountDropDown)
+        self.baseClass.wait_for_element(self.driver, self.AccountDropDown)
         self.driver.find_element(*self.AccountDropDown).click()
         return self.driver.find_element(*self.AccountDropDown_Forget)
 

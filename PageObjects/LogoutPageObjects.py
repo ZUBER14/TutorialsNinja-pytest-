@@ -26,7 +26,7 @@ class LogoutPageObjects:
     login_loc = (By.LINK_TEXT, "Login")
 
     def Account_logout(self):
-        self.baseClass.explicit_wait(*self.account_loc)
+        self.baseClass.wait_for_element(self.driver, self.account_loc)
         self.driver.find_element(*self.account_loc).click()
         self.driver.find_element(*self.login_loc).click()
         loginPage = LoginPageObjects.LoginPageObjects(self.driver)
